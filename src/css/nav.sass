@@ -1,0 +1,169 @@
+
+.nav
+  height: $navHeight
+  width: 100%
+  sbackground-color: blue
+  font-weight: bold
+  stext-transform: uppercase
+  letter-spacing: 1px
+  position: fixed
+  top: 0
+  left: 0
+  a
+    color: $colorGrey
+    color: $colorAlmostWhite
+    &:hover
+      color: $colorGolden
+  .top-bar
+    height: $navHeight
+
+    .menu-home
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      text-align: center
+      sbackground-color: black
+      height: $navHeight
+      overflow: hidden
+      opacity: 1
+      transition: 0.4s linear
+      z-index: -1
+      
+
+      img
+        max-width: 200px
+        sbackground-color: #dddddd
+        smargin-top: -30px
+        sdisplay: none
+    .menu-icon
+      position: absolute
+      top: 50%
+      left: 20px
+      transform: translateY(-50%)
+      cursor: pointer
+      height: 30px
+      width: 30px
+      .line
+        position: absolute
+        left: 2.5px
+        width: 25px
+        height: 2px
+        background-color: black
+      .line:nth-child(1)
+        top: 25%
+      .line:nth-child(2)
+        top: 50%
+      .line:nth-child(3)
+        top: 75%
+
+      .line:nth-child(1).active
+        animation: $menuIconAnimationTime linear line-1 0s 1 forwards
+      .line:nth-child(2).active
+        animation: $menuIconAnimationTime linear line-2 0s 1 forwards
+      .line:nth-child(3).active
+        animation: $menuIconAnimationTime linear line-3 0s 1 forwards
+
+      .line:nth-child(1).inactive
+        animation: $menuIconAnimationTime linear line-1-back 0s 1 forwards
+      .line:nth-child(2).inactive
+        animation: $menuIconAnimationTime linear line-2-back 0s 1 forwards
+      .line:nth-child(3).inactive
+        animation: $menuIconAnimationTime linear line-3-back 0s 1 forwards
+  .top-bar.dark
+    background-color: $colorDarkGrey
+    transition: 0.4s linear
+    
+    @keyframes line-1
+      0%
+        top: 25%
+      50%
+        top: 75%
+        transform: rotate(0deg)
+      100%
+        top: 50%
+        transform: rotate(-45deg)
+    @keyframes line-2
+      0%
+        top: 50%
+      50%
+        top: 75%
+        transform: rotate(0deg)
+      100%
+        top: 50%
+        transform: rotate(45deg)
+    @keyframes line-3
+      0%
+        opacity: 1
+      50%
+        opacity: 1
+      51%
+        opacity: 0
+      100%
+        opacity: 0
+    @keyframes line-1-back
+      0%
+        transform: rotate(-45deg)
+        top: 50%
+      50%
+        top: 75%
+        transform: rotate(0deg)
+      100%
+        top: 25%
+    @keyframes line-2-back
+      0%
+        top: 50%
+        transform: rotate(45deg)
+      50%
+        top: 75%
+        transform: rotate(0deg)
+      100%
+        top: 50%
+    @keyframes line-3-back
+      0%
+        opacity: 0
+      50%
+        opacity: 0
+      51%
+        opacity: 1
+      100%
+        opacity: 1
+  .slide-menu
+    sbackground-color: white
+    transition: 0.4s linear
+    ul
+      padding: 20px
+      list-style-type: none
+      width: calc(100% - 40px)
+      transition: 0.5s linear
+      display: none
+      
+      sbackground-color: green
+      li
+        margin: 10px
+        margin-top: 20px
+        padding-bottom: 10px
+        sbackground-color: lightpink
+  ul.active
+    transition: 0.5s linear
+    display: unset
+  .slide-menu.dark 
+    background-color: $colorDarkGrey
+
+
+@media ( min-width: 600px )
+  .nav
+    .top-bar
+      .menu-home
+        img
+          margin-top: -30px
+          max-width: 400px
+    .slide-menu
+      ul
+        display: flex
+        justify-content: center
+        li
+          margin-top: 0px
+          padding-bottom: 0px
+
+

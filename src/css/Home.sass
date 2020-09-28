@@ -1,0 +1,77 @@
+
+.home-container
+  display: flex
+  flex-direction: column
+  align-items: center
+  sbackground-color: yellow
+  width: 100%
+  padding-top: 50px
+  h1
+    sbackground-color: blue
+    text-align: center
+  .info-text
+    sbackground-color: pink
+    width: 70%
+    max-width: 600px
+    text-align: center
+    letter-spacing: 1px
+    color: $colorGrey
+    line-height: 1.5
+    padding: 20px
+    smargin-top: 100px
+    margin-bottom: 100px
+  .large-text
+    box-sizing: border-box
+    font-size: 40px
+    text-align: center
+    width: 100%
+    padding: 100px 20px 100px 20px
+    margin-top: 50px
+    margin-bottom: 150px
+    background-color: black
+    color: white
+    font-family: Courier
+  .long-text
+    font-family: Verdana
+    text-align: center
+    line-height: 1.5
+    color: $colorGrey
+    width: 80%
+    margin-bottom: 150px
+    h3
+      color: black
+      padding: 10px
+  .items-in-row
+    display: flex
+    flex-direction: row
+    color: $colorGrey
+    padding: 20px
+    padding-bottom: 200px
+    text-align: center
+    .item
+      max-width: 300px
+      line-height: 1.5
+      margin: 20px
+      sbackground-color: pink
+    p
+      color: black
+      font-size: 20px
+      padding: 10px
+  .portfolio
+    display: flex
+    flex-direction: column
+    align-items: center
+    line-height: 2
+    margin-bottom: 200px
+
+@media ( max-width: 600px )
+  .home-container
+    h1
+      font-size: 25px
+    .items-in-row
+      flex-direction: column
+      .item
+        sbackground-color: pink
+    .large-text
+      font-size: 25px
+  

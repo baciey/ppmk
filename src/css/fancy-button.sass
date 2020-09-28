@@ -1,0 +1,32 @@
+.fancy-button
+  border: 2px solid black
+  background-color: #fff
+  a
+    display: block
+    padding: 10px 40px 10px 40px
+    color: black
+    font-size: 14px
+    font-weight: bold
+    letter-spacing: 2px
+    background-color: transparent
+    z-index: 1
+    position: relative
+    overflow: hidden
+    &:hover
+      color: #fff
+    &:hover::before
+      left: -30px
+      transition: 0.2s linear
+  a::before
+    content: ""
+    display: block
+    position: absolute
+    top: 0
+    left: -350px
+    transition: 0.2s linear
+    z-index: -1
+    border-bottom: 36px solid black
+    border-left: 25px solid transparent
+    border-right: 25px solid transparent
+    height: 0
+    width: 300px
