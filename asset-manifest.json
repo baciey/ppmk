@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ppmk/static/css/main.d3d66dba.chunk.css",
+    "main.css": "/ppmk/static/css/main.42c04717.chunk.css",
     "main.js": "/ppmk/static/js/main.44808014.chunk.js",
     "main.js.map": "/ppmk/static/js/main.44808014.chunk.js.map",
     "runtime-main.js": "/ppmk/static/js/runtime-main.96f6e7b0.js",
@@ -8,9 +8,9 @@
     "static/js/2.763273f0.chunk.js": "/ppmk/static/js/2.763273f0.chunk.js",
     "static/js/2.763273f0.chunk.js.map": "/ppmk/static/js/2.763273f0.chunk.js.map",
     "index.html": "/ppmk/index.html",
-    "precache-manifest.b3c03c3f700806968bd67c8872309332.js": "/ppmk/precache-manifest.b3c03c3f700806968bd67c8872309332.js",
+    "precache-manifest.60d61ccabd19f0cbfd6e139f6b529a64.js": "/ppmk/precache-manifest.60d61ccabd19f0cbfd6e139f6b529a64.js",
     "service-worker.js": "/ppmk/service-worker.js",
-    "static/css/main.d3d66dba.chunk.css.map": "/ppmk/static/css/main.d3d66dba.chunk.css.map",
+    "static/css/main.42c04717.chunk.css.map": "/ppmk/static/css/main.42c04717.chunk.css.map",
     "static/js/2.763273f0.chunk.js.LICENSE.txt": "/ppmk/static/js/2.763273f0.chunk.js.LICENSE.txt",
     "static/media/cennik.jpg": "/ppmk/static/media/cennik.e1774ea0.jpg",
     "static/media/contact.jpg": "/ppmk/static/media/contact.ee319876.jpg",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.96f6e7b0.js",
     "static/js/2.763273f0.chunk.js",
-    "static/css/main.d3d66dba.chunk.css",
+    "static/css/main.42c04717.chunk.css",
     "static/js/main.44808014.chunk.js"
   ]
 }
