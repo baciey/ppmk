@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/ppmk/static/css/main.e11e615a.chunk.css",
-    "main.js": "/ppmk/static/js/main.cd00a326.chunk.js",
-    "main.js.map": "/ppmk/static/js/main.cd00a326.chunk.js.map",
+    "main.css": "/ppmk/static/css/main.6d040070.chunk.css",
+    "main.js": "/ppmk/static/js/main.1d108187.chunk.js",
+    "main.js.map": "/ppmk/static/js/main.1d108187.chunk.js.map",
     "runtime-main.js": "/ppmk/static/js/runtime-main.96f6e7b0.js",
     "runtime-main.js.map": "/ppmk/static/js/runtime-main.96f6e7b0.js.map",
-    "static/js/2.b33d4438.chunk.js": "/ppmk/static/js/2.b33d4438.chunk.js",
-    "static/js/2.b33d4438.chunk.js.map": "/ppmk/static/js/2.b33d4438.chunk.js.map",
+    "static/js/2.82097793.chunk.js": "/ppmk/static/js/2.82097793.chunk.js",
+    "static/js/2.82097793.chunk.js.map": "/ppmk/static/js/2.82097793.chunk.js.map",
     "index.html": "/ppmk/index.html",
-    "precache-manifest.797fb311e16c1bd844a48d88adf1f17e.js": "/ppmk/precache-manifest.797fb311e16c1bd844a48d88adf1f17e.js",
+    "precache-manifest.68f1281fc153bd7679a732e19c2122f4.js": "/ppmk/precache-manifest.68f1281fc153bd7679a732e19c2122f4.js",
     "service-worker.js": "/ppmk/service-worker.js",
-    "static/css/main.e11e615a.chunk.css.map": "/ppmk/static/css/main.e11e615a.chunk.css.map",
-    "static/js/2.b33d4438.chunk.js.LICENSE.txt": "/ppmk/static/js/2.b33d4438.chunk.js.LICENSE.txt",
+    "static/css/main.6d040070.chunk.css.map": "/ppmk/static/css/main.6d040070.chunk.css.map",
+    "static/js/2.82097793.chunk.js.LICENSE.txt": "/ppmk/static/js/2.82097793.chunk.js.LICENSE.txt",
     "static/media/cennik.jpg": "/ppmk/static/media/cennik.e1774ea0.jpg",
     "static/media/contact.jpg": "/ppmk/static/media/contact.ee319876.jpg",
     "static/media/contact2.jpg": "/ppmk/static/media/contact2.ae96eab6.jpg",
@@ -19,12 +19,13 @@
     "static/media/hb.png": "/ppmk/static/media/hb.42b0f529.png",
     "static/media/lady2.jpg": "/ppmk/static/media/lady2.26dae841.jpg",
     "static/media/logo.png": "/ppmk/static/media/logo.e2e6487f.png",
+    "static/media/onas.jpg": "/ppmk/static/media/onas.231df078.jpg",
     "static/media/portfolio.jpg": "/ppmk/static/media/portfolio.a7ddb219.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.96f6e7b0.js",
-    "static/js/2.b33d4438.chunk.js",
-    "static/css/main.e11e615a.chunk.css",
-    "static/js/main.cd00a326.chunk.js"
+    "static/js/2.82097793.chunk.js",
+    "static/css/main.6d040070.chunk.css",
+    "static/js/main.1d108187.chunk.js"
   ]
 }
