@@ -1,4 +1,7 @@
-@import 'variables', 'nav', 'Home', 'fancy-button'
+@import 'variables', 'fancy-button', 'Loader'
+html
+  scroll-behavior: smooth
+  scolor: #565655
 
 *
   margin: 0
@@ -6,13 +9,17 @@
   text-decoration: none
 
 body
-  font-family: 'Lato', sans-serif
+  font-family: 'Raleway', sans-serif
+  font-display: swap
 
 .background-img
   position: absolute
+  top: 0
+  left: 0
   width: 100%
-  height: 100%
+  height: 80vh
   overflow: hidden
+  z-index: -1
   img
     position: absolute
     top: 50%
@@ -20,23 +27,52 @@ body
     transform: translate(-50%, -50%)
     min-width: 100%
     min-height: 100%
-    filter: brightness(0.5)
-    sheight: 100vh
-.container
-  background-color: #fff
+    // filter: brightness(0.5)
+    filter: grayscale(70%) brightness(0.3)
+    width: 100%
+  .text-on-image
+    sbackground-color: rgba(0, 0, 0, .7)
+    color: white
+    position: absolute
+    top: 85%
+    left: 50%
+    transform: translate(-50%, -50%)
+    font-weight: 400
+    font-size: 30px
+    text-align: center
+    width: 80%
+.content
   min-height: 200px
-  margin-top: 100vh
-  position: absolute
-  width: 100%
-  z-index: -1
+  margin-top: 80vh
 .footer
   background-color: black
   color: pink
-  position: absolute
-  bottom: 0
-  left: 0
   width: 100%
   padding: 20px
   box-sizing: border-box
   margin-top: 50px
 
+@media ( max-width: 600px )
+  .background-img
+    sbackground-color: blue
+    .text-on-image
+      font-size: 25px
+      color: $colorGrey
+    img
+      top: 70px
+      transform: translate(-50%, 0%)
+      min-height: 0px
+
+@media ( max-width: 399px )
+  .background-img
+    .text-on-image
+      font-size: 25px
+      color: $colorGrey
+      top: 40%
+      sbackground-color: pink
+    img
+      top: 70px
+      transform: translate(-50%, 0%)
+      min-height: 0px
+  .content
+    margin-top: 40vh

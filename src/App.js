@@ -2,6 +2,8 @@ import React from 'react';
 import ScrollToTop from 'react-router-scroll-top'
 import { HashRouter as Router, Route, NavLink, Switch } from "react-router-dom";
 import './css/App.sass';
+import './css/nav.sass';
+
 
 import Home from './Home'
 import Portfolio from './Portfolio'
@@ -10,7 +12,12 @@ import Kontakt from './Kontakt'
 import Cennik from './Cennik'
 
 import Logo from './img/logo.png'
-import bgcImg from './img/bgc-img-home.jpg'
+import contactBg from './img/contact.jpg'
+
+
+// import bgcImg from './img/bgc-img-home.jpg'
+// import bgcImg from './img/bgc.jpg'
+
 
 
 
@@ -25,7 +32,7 @@ const adress = 'Wrocław, ul Balzaka 32/6'
 const info = [tel, email, adress]
 
 
-
+const bg = 'https://i.postimg.cc/5by8T5ZG/120674372-372783977093864-3573197447115165707-n.jpg'
 
 class App extends React.Component {
   state = {
@@ -35,16 +42,23 @@ class App extends React.Component {
     scroll: 0,
     logoHide: false,
     menuBgGoDark: false,
+    opacity: true,
+    url: bg,
+    bgImage: bg,
   }
   handleScroll = () => {
-    this.setState({ scroll: window.scrollY })
-    if (window.scrollY > 99) {
-      this.setState({ logoHide: true })
-    } else this.setState({ logoHide: false })
+    if (this.state.width >= 600) {
+      this.setState({ scroll: window.scrollY })
+      if (window.scrollY > 99) {
+        this.setState({ logoHide: true })
+      } else this.setState({ logoHide: false })
 
-    if (window.scrollY >= 260) {
-      this.setState({ menuBgGoDark: true })
-    } else this.setState({ menuBgGoDark: false })
+      if (window.scrollY >= 260) {
+        this.setState({ menuBgGoDark: true })
+      } else this.setState({ menuBgGoDark: false })
+    } else {
+      this.setState({ logoHide: false, menuBgGoDark: false })
+    }
   };
   handleHamburgerClick = () => {
     if (this.state.menuToggle === '') {
@@ -55,7 +69,8 @@ class App extends React.Component {
       this.setState({ menuToggle: true })
     }
   }
-  handleMenuListClick = () => {
+  handleMenuListClick = (path) => {
+    this.setState({ url: path })
     if (window.innerWidth < 600) {
       if (this.state.menuToggle) {
         this.setState({ menuToggle: !this.state.menuToggle })
@@ -76,6 +91,15 @@ class App extends React.Component {
     window.removeEventListener('resize', this.updateDimensions);
     window.removeEventListener('scroll', this.handleScroll);
   }
+
+  getData = (value) => {
+    // console.log(value.length);
+    if (value.length > 5) {
+      this.setState({ url: value })
+    } else {
+      this.setState({ opacity: value })
+    }
+  }
   render() {
     let classes;
     let menuBg;
@@ -89,50 +113,45 @@ class App extends React.Component {
       <Router basename={process.env.PUBLIC_URL}>
         <ScrollToTop>
           <>
-            <div className="background-img">
-              <img src={bgcImg} alt="" />
-            </div>
             <div className={"nav " + classes}>
-              <div className={"top-bar " + menuBg}>
-                {this.state.width >= 600 ? null : <div onClick={this.handleHamburgerClick} className="menu-icon">
+              {this.state.width >= 600 ? null :
+                <div className="menu-icon" onClick={this.handleHamburgerClick} >
                   <div className={"line " + classes}></div>
                   <div className={"line " + classes}></div>
                   <div className={"line " + classes}></div>
-                </div>}
-                <NavLink className="menu-home" style={!this.state.logoHide ? { opacity: "1", zIndex: "0" } : { opacity: "0", zIndex: "-1" }}
-                  onClick={this.handleMenuListClick}
-                  to="/" exact >
-                  <img src={Logo} alt="" />
-                </NavLink>
-              </div>
+                </div>
+              }
+              <NavLink
+                className="logo"
+                onClick={this.handleMenuListClick}
+                to="/" exact
+                style={this.state.width >= 600 && this.state.logoHide ? { opacity: "0", height: '100px' } : { opacity: "1", height: '190px' }} >
+                <img src={Logo} alt="" />
+              </NavLink>
               <div className={"slide-menu " + menuBg}
-                style={this.state.logoHide && this.state.width >= 600 ?
-                  { marginTop: "-70px" } : { marginTop: "0px" }
-
-                } >
+                style={this.state.logoHide && this.state.width >= 600 ? { marginTop: "0px" } : null} >
                 <ul className={classes}>
-                  <li><NavLink onClick={this.handleMenuListClick} to="/" exact>Home</NavLink></li>
-                  <li><NavLink onClick={this.handleMenuListClick} to="/portfolio">Portfolio</NavLink></li>
-                  <li><NavLink onClick={this.handleMenuListClick} to="/o-nas">O nas</NavLink></li>
-                  <li><NavLink onClick={this.handleMenuListClick} to="/kontakt">Kontakt</NavLink></li>
-                  <li><NavLink onClick={this.handleMenuListClick} to="/cennik">Cennik</NavLink></li>
+                  <li><NavLink onClick={() => this.handleMenuListClick(bg)} activeClassName="active" to="/" exact>Home</NavLink></li>
+                  <li><NavLink onClick={() => this.handleMenuListClick(bg)} activeClassName="active" to="/portfolio">Portfolio</NavLink></li>
+                  <li><NavLink onClick={() => this.handleMenuListClick(bg)} activeClassName="active" to="/o-nas">O mnie</NavLink></li>
+                  <li><NavLink onClick={() => this.handleMenuListClick(contactBg)} activeClassName="active" to="/kontakt">Kontakt</NavLink></li>
+                  <li><NavLink onClick={() => this.handleMenuListClick(bg)} activeClassName="active" to="/cennik">Cennik</NavLink></li>
                 </ul>
               </div>
             </div>
-            <div className="container">
-              container {this.state.scroll}
+            <div className="content">
               <Switch>
-                <Route path="/" exact ><Home /></Route>
-                <Route path="/portfolio" ><Portfolio /></Route>
-                <Route path="/o-nas"><Onas /></Route>
-                <Route path="/kontakt"><Kontakt info={info} /></Route>
-                <Route path="/cennik" exact><Cennik /></Route>
+                <Route path="/" exact ><Home width={this.state.width} data={(opacity) => this.getData(opacity)} /></Route>
+                <Route path="/portfolio" ><Portfolio width={this.state.width} /></Route>
+                <Route path="/o-nas"><Onas width={this.state.width} /></Route>
+                <Route path="/kontakt"><Kontakt width={this.state.width} info={info} /></Route>
+                <Route path="/cennik" exact><Cennik width={this.state.width} /></Route>
               </Switch>
-              <div className="footer">
-                stopka
-            </div>
-            </div>
 
+            </div>
+            <div className="footer">
+              stopka
+            </div>
           </>
         </ScrollToTop>
       </Router>

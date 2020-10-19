@@ -1,16 +1,56 @@
-import React from 'react';
-// import TopBar from './img/top-bar.jpg'
+import React, { useState } from 'react'
 import FancyButton from './FancyButton'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import './css/Home.sass';
+
+import ArrowDown from './ArrowDown'
 
 
-const Home = () => {
+const bg = 'https://i.postimg.cc/5by8T5ZG/120674372-372783977093864-3573197447115165707-n.jpg'
+
+const Home = (props) => {
+
+
+  const [url, setUrl] = useState(bg);
+  const [change, changeUrl] = useState('url');
+  const [opacity, changeOpacity] = useState(true);
+
+
+
+
+
   return (
-    <div className="home-container">
-      <h1>Pracownia Projektowa Małgorzata Baczyńska</h1>
-      <div className="info-text"> Home
+    <div className="home-container" >
+      <div className="background-img">
+        <img src={url} alt="" style={opacity ? { filter: "brightness(0.5)" } : { filter: "brightness(1)" }} />
+        <div className="text-on-image">
+          <p>"Z pasji do projektowania.."</p>
+        </div>
+      </div>
+      <ArrowDown />
+      <div className="inputs">
+        <input value={url} onChange={(e) => setUrl(e.target.value)} type="text" />
+        <button onClick={() => {
+          changeUrl(url)
+        }
+        }>dodaj zdjecie</button>
+        <button onClick={() => {
+          props.data(change)
+
+        }
+        }>podmień zdjecie</button>
+        <button onClick={() => {
+          changeOpacity(!opacity)
+          props.data(!opacity)
+        }
+        }>dark/original</button>
+      </div>
+
+      <h1 >Pracownia Projektowa Małgorzata Baczyńska</h1>
+      <div className="info-text" > Home
       Witamy w Houselab Projektowanie Wnętrz Wrocław, pracowni projektowej działającej we Wrocławiu i Warszawie, kreującej unikalne wnętrza. Przewiń w dół, aby uzyskać dostęp do treści strony, lub wybierz interesującą Cię pozycję z górnego menu.
       </div>
-      <div className="large-text">
+      <div className="large-text" >
         „DO PROJEKTOWANIA PODCHODZIMY POWAŻNIE I Z PASJĄ, JEDNOCZEŚNIE CHCĄC SIĘ NIM BAWIĆ.”
       </div>
       <div className="long-text">
@@ -40,7 +80,7 @@ Houselab to młoda i ambitna pracownia zajmująca się projektowaniem wnętrz. T
           <span>Masz pewność, że nie zaskoczy Cię rachunek. Przygotowaliśmy do wyboru 4 podstawowe plany, o ewentualnych, dodatkowych kosztach informujemy w jasny sposób.</span>
         </div>
       </div>
-      <div className="portfolio">
+      <div className="portfolio" >
         <h3>Portfolio</h3>
         Kliknij, aby przejść do portfolio.
         <FancyButton
