@@ -1,31 +1,47 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "31025b2819a71411215fa41d78b07c62",
+    "revision": "c2d42bbb5a6c723aa8663a64dc6063cb",
     "url": "/ppmk/index.html"
   },
   {
-    "revision": "e7cdbb79d9f7a49683b0",
+    "revision": "521a505c639eef55c5eb",
     "url": "/ppmk/static/css/2.9522b9fe.chunk.css"
   },
   {
-    "revision": "1edeccf9f02c6add92d3",
-    "url": "/ppmk/static/css/main.34799649.chunk.css"
+    "revision": "bd52183253e951c21132",
+    "url": "/ppmk/static/css/3.b86c3c12.chunk.css"
   },
   {
-    "revision": "e7cdbb79d9f7a49683b0",
-    "url": "/ppmk/static/js/2.8e3980d0.chunk.js"
+    "revision": "521a505c639eef55c5eb",
+    "url": "/ppmk/static/js/2.c5224070.chunk.js"
   },
   {
-    "revision": "9b31608f9d672d510990706fadcf88b2",
-    "url": "/ppmk/static/js/2.8e3980d0.chunk.js.LICENSE.txt"
+    "revision": "bccb76cf9a8340e4a886dea1de27f61e",
+    "url": "/ppmk/static/js/2.c5224070.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1edeccf9f02c6add92d3",
-    "url": "/ppmk/static/js/main.effc5c16.chunk.js"
+    "revision": "bd52183253e951c21132",
+    "url": "/ppmk/static/js/3.b7911d48.chunk.js"
   },
   {
-    "revision": "f8ce2f607b7ba7aaa02d",
-    "url": "/ppmk/static/js/runtime-main.96f6e7b0.js"
+    "revision": "caba20cdc90787257b7d",
+    "url": "/ppmk/static/js/4.f880f3ae.chunk.js"
+  },
+  {
+    "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
+    "url": "/ppmk/static/js/4.f880f3ae.chunk.js.LICENSE.txt"
+  },
+  {
+    "revision": "8384ae5b9556749587ec",
+    "url": "/ppmk/static/js/main.658ef303.chunk.js"
+  },
+  {
+    "revision": "a72c5a9b3da610508190",
+    "url": "/ppmk/static/js/runtime-main.5a16073a.js"
+  },
+  {
+    "revision": "12c6990bcc5116ac85191d71a0a1a426",
+    "url": "/ppmk/static/media/Małgorzata-Kowalkowska.12c6990b.jpg"
   },
   {
     "revision": "727276378141c2babd91aa1eaf6aa2f7",
@@ -45,7 +61,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "52b96dc315a2d25a220bb5fbd2389bce",
-    "url": "/ppmk/static/media/kontakt-1280px1.52b96dc3.jpg"
+    "url": "/ppmk/static/media/kontakt-1280px.52b96dc3.jpg"
   },
   {
     "revision": "a0e6cef27cf29201ff74d6b70dd1f6f1",
@@ -54,10 +70,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1a4341492ed36acf975f77ef655b5dfa",
     "url": "/ppmk/static/media/lady.1a434149.jpg"
-  },
-  {
-    "revision": "12c6990bcc5116ac85191d71a0a1a426",
-    "url": "/ppmk/static/media/lady2.12c6990b.jpg"
   },
   {
     "revision": "8c4d0edb6bdd2799adaf556c251daeb9",
