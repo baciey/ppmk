@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c1d2d108c90362b4bae7183d97bbbfab",
+    "revision": "310bf8c2e0166ccf25ac63c2462c2c6d",
     "url": "/ppmk/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ppmk/static/css/2.9522b9fe.chunk.css"
   },
   {
-    "revision": "966fecc954c6e0e25f7f",
-    "url": "/ppmk/static/css/3.314b28e3.chunk.css"
+    "revision": "82c9ccb8c85e24263018",
+    "url": "/ppmk/static/css/3.b65ca2df.chunk.css"
   },
   {
     "revision": "521a505c639eef55c5eb",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ppmk/static/js/2.c5224070.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "966fecc954c6e0e25f7f",
-    "url": "/ppmk/static/js/3.b7911d48.chunk.js"
+    "revision": "82c9ccb8c85e24263018",
+    "url": "/ppmk/static/js/3.253058da.chunk.js"
   },
   {
     "revision": "caba20cdc90787257b7d",
@@ -36,24 +36,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ppmk/static/js/main.658ef303.chunk.js"
   },
   {
-    "revision": "761e894c4de38d5080dc",
-    "url": "/ppmk/static/js/runtime-main.8c88cea4.js"
+    "revision": "4ac599d4d06d8ef0cf6b",
+    "url": "/ppmk/static/js/runtime-main.72b5bde9.js"
   },
   {
     "revision": "12c6990bcc5116ac85191d71a0a1a426",
     "url": "/ppmk/static/media/Małgorzata-Kowalkowska.12c6990b.jpg"
   },
   {
-    "revision": "727276378141c2babd91aa1eaf6aa2f7",
-    "url": "/ppmk/static/media/bgc-img-home.72727637.jpg"
+    "revision": "d23c6d134c1480ec04a181b60b4bea85",
+    "url": "/ppmk/static/media/bgc-img-home.d23c6d13.jpg"
   },
   {
     "revision": "7a9fad5c53533969be4cefe3b8e8e7f3",
     "url": "/ppmk/static/media/bgc.7a9fad5c.jpg"
   },
   {
-    "revision": "e1774ea00bff57e2edb92fa29c9b5dce",
-    "url": "/ppmk/static/media/cennik.e1774ea0.jpg"
+    "revision": "d7e4936a6c66f191170777325fa9d9b7",
+    "url": "/ppmk/static/media/cennik.d7e4936a.jpg"
   },
   {
     "revision": "ee319876baf9f76839ca6ef24b062741",
