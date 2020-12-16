@@ -1,20 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import FancyButton from './FancyButton'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import './css/Home.sass';
 
 import ArrowDown from './ArrowDown'
 
 
-const bg = 'https://i.postimg.cc/5by8T5ZG/120674372-372783977093864-3573197447115165707-n.jpg'
+
+// const bg = 'https://i.postimg.cc/5by8T5ZG/120674372-372783977093864-3573197447115165707-n.jpg'
 
 const Home = (props) => {
+  const { width } = props
 
 
-  const [url, setUrl] = useState(bg);
-  const [change, changeUrl] = useState('url');
-  const [opacity, changeOpacity] = useState(true);
-
+  // const [url, setUrl] = useState(bg);
+  // const [change, changeUrl] = useState('url');
+  // const [opacity, changeOpacity] = useState(true);
+  useEffect(() => {
+    document.title = "PPMK - Home"
+  })
 
 
 
@@ -22,13 +25,15 @@ const Home = (props) => {
   return (
     <div className="home-container" >
       <div className="background-img">
-        <img src={url} alt="" style={opacity ? { filter: "brightness(0.5)" } : { filter: "brightness(1)" }} />
+        {/* <img src={url} alt="" style={opacity ? { filter: "brightness(0.5)" } : { filter: "brightness(1)" }} /> */}
+        {/* <img src={props.bg[0]} alt=""/> */}
+        {<img src={width < 1024 ? props.bg[8] : props.bg[0]} alt="" />}
         <div className="text-on-image">
-          <p>"Z pasji do projektowania.."</p>
+          <p>Z pasji do projektowania..</p>
         </div>
       </div>
       <ArrowDown />
-      <div className="inputs">
+      {/* <div className="inputs">
         <input value={url} onChange={(e) => setUrl(e.target.value)} type="text" />
         <button onClick={() => {
           changeUrl(url)
@@ -44,7 +49,7 @@ const Home = (props) => {
           props.data(!opacity)
         }
         }>dark/original</button>
-      </div>
+      </div> */}
 
       <h1 >Pracownia Projektowa Małgorzata Baczyńska</h1>
       <div className="info-text" > Home

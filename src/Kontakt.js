@@ -1,12 +1,10 @@
 import React from 'react';
-import './css/Kontakt.sass';
 
 import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faTimes, faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 // import bg1280 from './img/kontakt-1280px.jpg'
-import bg1280 from './img/kontakt-1280px1.jpg'
-import bg480 from './img/kontakt-480px.jpg'
+// import bg480 from './img/kontakt-480px.jpg'
 
 import ArrowDown from './ArrowDown'
 import hb from './img/hb1.png'
@@ -14,8 +12,7 @@ import fb from './img/fb2.png'
 
 
 
-const fbURL = "https://www.facebook.com/Pracownia-Projektowa-Ma%C5%82gorzata-Kowalkowska-407837736472631/"
-const hbURL = 'https://www.homebook.pl/profil/1162158/ppmk'
+
 
 class Kontakt extends React.Component {
   state = {
@@ -125,12 +122,14 @@ class Kontakt extends React.Component {
   }
 
 
-
+  componentDidMount() {
+    document.title = "PPMK - Kontakt"
+  }
 
   render() {
     const { user_name, email, msg, user_nameStyle, emailStyle, msgStyle,
       nameIsOkay, emailIsOkay, msgIsOkay, user_nameError, emailError, msgError, msgSuccessful, errorInfo, LoaderON } = this.state
-    const width = this.props.width;
+    const { width, contactInfo } = this.props;
     let error;
     if (user_nameError.length > 2) error = user_nameError
     else {
@@ -148,7 +147,7 @@ class Kontakt extends React.Component {
       <div className="kontakt-container">
         {width < 400 ? null : <ArrowDown />}
         <div className="background-img">
-          {width < 400 ? null : <img src={width < 1024 ? bg480 : bg1280} alt="" />}
+          {width < 400 ? null : <img src={width < 1024 ? this.props.bg[6] : this.props.bg[5]} alt="" />}
           <div className="text-on-image">
             <p>Skontaktuj się z nami</p>
           </div>
@@ -201,15 +200,15 @@ class Kontakt extends React.Component {
         <div className="contact-info flexItem">
           <div className="info">
             <h3>Dane kontaktowe</h3>
-            <p><FontAwesomeIcon className="icon" icon={faMapMarkerAlt} /> Wrocław</p>
-            <p><FontAwesomeIcon className="icon" icon={faPhone} /> +48 123 321 231</p>
-            <p><FontAwesomeIcon className="icon" icon={faEnvelope} /> mb.arch@vp.pl</p>
+            <p><FontAwesomeIcon className="icon" icon={faMapMarkerAlt} /> {contactInfo.adress}</p>
+            <p><FontAwesomeIcon className="icon" icon={faPhone} /> {contactInfo.phone}</p>
+            <p><FontAwesomeIcon className="icon" icon={faEnvelope} /> {contactInfo.email}</p>
           </div>
           <div className="social-media">
-            <div className="fb" onClick={() => { window.open(fbURL, '_blank') }}>
+            <div className="fb" onClick={() => { window.open(contactInfo.fbURL, '_blank') }}>
               <img src={fb} alt="" />
             </div>
-            <div className="hb" onClick={() => { window.open(hbURL, '_blank') }}>
+            <div className="hb" onClick={() => { window.open(contactInfo.hbURL, '_blank') }}>
               <img src={hb} alt="" />
             </div>
           </div>

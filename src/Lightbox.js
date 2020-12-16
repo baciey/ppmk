@@ -15,21 +15,24 @@ export default class LightboxExample extends Component {
 
   render() {
     const { photoIndex, isOpen } = this.state;
-    const { images, bg } = this.props;
+    const { project } = this.props;
+    
+
+    const images = project.images.map(image => image)
 
     return (
       <div>
         <div onClick={() => this.setState({ isOpen: true })} className="photo-container">
-          <img src={bg} alt="" style={{ width: '100%' }} />
+          <img src={project.thumbnail} alt="" style={{ width: '100%' }} />
         </div>
 
         {isOpen && (
           <Lightbox
-            imageTitle={"to jest tytuł zdjęcia (opcjonalnie)"}
-            imageCaption={"to jest opis zdjęcia asdasd asdasdas dasdasd asd(opcjonalnie)"}
-            mainSrc={images[photoIndex]}
-            nextSrc={images[(photoIndex + 1) % images.length]}
-            prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+            imageTitle={images[photoIndex].title}
+            imageCaption={images[photoIndex].desc}
+            mainSrc={images[photoIndex].img}
+            nextSrc={images[(photoIndex + 1) % images.length].img}
+            prevSrc={images[(photoIndex + images.length - 1) % images.length].img}
             onCloseRequest={() => this.setState({ isOpen: false })}
             onMovePrevRequest={() =>
               this.setState({

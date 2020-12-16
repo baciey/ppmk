@@ -1,4 +1,15 @@
-@import 'variables', 'fancy-button', 'Loader'
+@import 'variables'
+@import 'Home'
+@import 'Kontakt'
+// @import 'Cennik'
+@import 'Portfolio'
+@import 'Onas'
+@import 'fancy-button'
+@import 'nav'
+@import 'Loader'
+@import 'Polityka-Prywatnosci'
+
+// @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap')
 html
   scroll-behavior: smooth
   scolor: #565655
@@ -7,10 +18,14 @@ html
   margin: 0
   padding: 0
   text-decoration: none
+  box-sizing: border-box
+
+a:active, a:focus, a:visited, a
+  color: unset
 
 body
-  font-family: 'Raleway', sans-serif
-  font-display: swap
+  font-family: 'Raleway', 'arial'
+  // font-family: 'Raleway'
 
 .background-img
   position: absolute
@@ -45,12 +60,29 @@ body
   min-height: 200px
   margin-top: 80vh
 .footer
-  background-color: black
-  color: pink
-  width: 100%
+  background-color: #121111
+  color: $colorDarkGrey
+  min-height: 200px
   padding: 20px
-  box-sizing: border-box
-  margin-top: 50px
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+
+  p
+    margin: 5px 0 5px 0
+  .fb
+    background-color: #222
+    color: $colorDarkGrey
+    width: 60px
+    height: 60px
+    padding: 5px
+    display: flex
+    justify-content: center
+    align-items: center
+  .fb:hover
+    cursor: pointer
+    color: white
+    background-color: #3b5998
 
 @media ( max-width: 600px )
   .background-img
