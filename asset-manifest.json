@@ -2,21 +2,21 @@
   "files": {
     "main.js": "/ppmk/static/js/main.28707fc9.chunk.js",
     "main.js.map": "/ppmk/static/js/main.28707fc9.chunk.js.map",
-    "runtime-main.js": "/ppmk/static/js/runtime-main.4ea79bde.js",
-    "runtime-main.js.map": "/ppmk/static/js/runtime-main.4ea79bde.js.map",
+    "runtime-main.js": "/ppmk/static/js/runtime-main.4adac41c.js",
+    "runtime-main.js.map": "/ppmk/static/js/runtime-main.4adac41c.js.map",
     "static/css/2.9522b9fe.chunk.css": "/ppmk/static/css/2.9522b9fe.chunk.css",
     "static/js/2.c5224070.chunk.js": "/ppmk/static/js/2.c5224070.chunk.js",
     "static/js/2.c5224070.chunk.js.map": "/ppmk/static/js/2.c5224070.chunk.js.map",
-    "static/css/3.85469c04.chunk.css": "/ppmk/static/css/3.85469c04.chunk.css",
+    "static/css/3.3b565bf1.chunk.css": "/ppmk/static/css/3.3b565bf1.chunk.css",
     "static/js/3.2fe481cd.chunk.js": "/ppmk/static/js/3.2fe481cd.chunk.js",
     "static/js/3.2fe481cd.chunk.js.map": "/ppmk/static/js/3.2fe481cd.chunk.js.map",
     "static/js/4.f880f3ae.chunk.js": "/ppmk/static/js/4.f880f3ae.chunk.js",
     "static/js/4.f880f3ae.chunk.js.map": "/ppmk/static/js/4.f880f3ae.chunk.js.map",
     "index.html": "/ppmk/index.html",
-    "precache-manifest.3d95a0d7662afd3e3905cc58c24a950b.js": "/ppmk/precache-manifest.3d95a0d7662afd3e3905cc58c24a950b.js",
+    "precache-manifest.21a4c8054a840cc85e5e13fd0e3ed21b.js": "/ppmk/precache-manifest.21a4c8054a840cc85e5e13fd0e3ed21b.js",
     "service-worker.js": "/ppmk/service-worker.js",
     "static/css/2.9522b9fe.chunk.css.map": "/ppmk/static/css/2.9522b9fe.chunk.css.map",
-    "static/css/3.85469c04.chunk.css.map": "/ppmk/static/css/3.85469c04.chunk.css.map",
+    "static/css/3.3b565bf1.chunk.css.map": "/ppmk/static/css/3.3b565bf1.chunk.css.map",
     "static/js/2.c5224070.chunk.js.LICENSE.txt": "/ppmk/static/js/2.c5224070.chunk.js.LICENSE.txt",
     "static/js/4.f880f3ae.chunk.js.LICENSE.txt": "/ppmk/static/js/4.f880f3ae.chunk.js.LICENSE.txt",
     "static/media/Małgorzata-Kowalkowska.jpg": "/ppmk/static/media/Małgorzata-Kowalkowska.12c6990b.jpg",
@@ -34,7 +34,7 @@
     "static/media/portfolio-480px.jpg": "/ppmk/static/media/portfolio-480px.9d863e26.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.4ea79bde.js",
+    "static/js/runtime-main.4adac41c.js",
     "static/js/4.f880f3ae.chunk.js",
     "static/js/main.28707fc9.chunk.js"
   ]
