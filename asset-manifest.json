@@ -2,21 +2,21 @@
   "files": {
     "main.js": "/ppmk/static/js/main.28707fc9.chunk.js",
     "main.js.map": "/ppmk/static/js/main.28707fc9.chunk.js.map",
-    "runtime-main.js": "/ppmk/static/js/runtime-main.800f373d.js",
-    "runtime-main.js.map": "/ppmk/static/js/runtime-main.800f373d.js.map",
+    "runtime-main.js": "/ppmk/static/js/runtime-main.0102be42.js",
+    "runtime-main.js.map": "/ppmk/static/js/runtime-main.0102be42.js.map",
     "static/css/2.9522b9fe.chunk.css": "/ppmk/static/css/2.9522b9fe.chunk.css",
     "static/js/2.904b2b47.chunk.js": "/ppmk/static/js/2.904b2b47.chunk.js",
     "static/js/2.904b2b47.chunk.js.map": "/ppmk/static/js/2.904b2b47.chunk.js.map",
-    "static/css/3.59ea8a11.chunk.css": "/ppmk/static/css/3.59ea8a11.chunk.css",
-    "static/js/3.bebea249.chunk.js": "/ppmk/static/js/3.bebea249.chunk.js",
-    "static/js/3.bebea249.chunk.js.map": "/ppmk/static/js/3.bebea249.chunk.js.map",
+    "static/css/3.0a5fcdbb.chunk.css": "/ppmk/static/css/3.0a5fcdbb.chunk.css",
+    "static/js/3.dd5ea32c.chunk.js": "/ppmk/static/js/3.dd5ea32c.chunk.js",
+    "static/js/3.dd5ea32c.chunk.js.map": "/ppmk/static/js/3.dd5ea32c.chunk.js.map",
     "static/js/4.f880f3ae.chunk.js": "/ppmk/static/js/4.f880f3ae.chunk.js",
     "static/js/4.f880f3ae.chunk.js.map": "/ppmk/static/js/4.f880f3ae.chunk.js.map",
     "index.html": "/ppmk/index.html",
-    "precache-manifest.55f2f044e9b23753cb8570882c1c7d95.js": "/ppmk/precache-manifest.55f2f044e9b23753cb8570882c1c7d95.js",
+    "precache-manifest.c60b36f42ff2d9466a2746622c634841.js": "/ppmk/precache-manifest.c60b36f42ff2d9466a2746622c634841.js",
     "service-worker.js": "/ppmk/service-worker.js",
     "static/css/2.9522b9fe.chunk.css.map": "/ppmk/static/css/2.9522b9fe.chunk.css.map",
-    "static/css/3.59ea8a11.chunk.css.map": "/ppmk/static/css/3.59ea8a11.chunk.css.map",
+    "static/css/3.0a5fcdbb.chunk.css.map": "/ppmk/static/css/3.0a5fcdbb.chunk.css.map",
     "static/js/2.904b2b47.chunk.js.LICENSE.txt": "/ppmk/static/js/2.904b2b47.chunk.js.LICENSE.txt",
     "static/js/4.f880f3ae.chunk.js.LICENSE.txt": "/ppmk/static/js/4.f880f3ae.chunk.js.LICENSE.txt",
     "static/media/Małgorzata-Kowalkowska.jpg": "/ppmk/static/media/Małgorzata-Kowalkowska.12c6990b.jpg",
@@ -34,7 +34,7 @@
     "static/media/portfolio-480px.jpg": "/ppmk/static/media/portfolio-480px.9d863e26.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.800f373d.js",
+    "static/js/runtime-main.0102be42.js",
     "static/js/4.f880f3ae.chunk.js",
     "static/js/main.28707fc9.chunk.js"
   ]
