@@ -22,14 +22,14 @@ const Portfolio = (props) => {
 
   return (
     <>
-
-      <div className="portfolio-container">
-        <div className="background-img">
-          {<img src={width < 1024 ? props.bg[2] : props.bg[1]} alt="" />}
-          <div className="text-on-image">
-            <p>Poznaj nasze projekty</p>
-          </div>
+      <div className="background-img">
+        {<img src={width < 1024 ? props.bg[2] : props.bg[1]} alt="" />}
+        <div className="text-on-image">
+          <p>Poznaj nasze projekty</p>
         </div>
+      </div>
+      <div className="portfolio-container">
+
         <div className="gallery">
           {project}
         </div>

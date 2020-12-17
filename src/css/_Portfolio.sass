@@ -3,21 +3,17 @@
   min-height: 400px
   .gallery
     display: flex
-    flex-wrap: wrap
-    justify-content: space-around
-    padding-top: 50px
+    flex-direction: column
+    align-items: center
+    padding: 50px 0 50px 0
     .galleryItem
       margin: 10px
       background-color: #2b2928
       color: $colorAlmostWhite
-      width: 20%
-
       h3
         font-size: 16px
         font-weight: normal
         padding: 5px
-        box-sizing: border-box
-
       .photo-container
         width: 100%
         sbackground-color: green
@@ -33,23 +29,19 @@
         &:hover img
           transform: scale(1.2)
           transition: 0.2s linear
-@media ( max-width: 1023px )
+
+@media ( min-width: 600px )
+  .portfolio-container
+    .gallery
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: space-around
+      .galleryItem
+        width: calc( 50% - 40px)
+        margin: 20px
+
+@media ( min-width: 1024px )
   .portfolio-container
     .gallery
       .galleryItem
-        margin: 10px
-        width: 45%
-
-@media ( max-width: 600px )
-  .portfolio-container
-    .gallery
-      .galleryItem
-        margin: 10px
-        width: 90%
-
-@media ( max-width: 399px )
-  .portfolio-container
-    .background-img
-      .text-on-image
-        top: 30%
-        color: $colorAlmostWhite
+        width: calc( 25% - 40px)

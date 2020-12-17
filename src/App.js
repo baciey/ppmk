@@ -80,12 +80,8 @@ class App extends React.Component {
     if (this.state.width >= 600) {
       this.setState({ scroll: window.scrollY })
       if (window.scrollY > 99) {
-        this.setState({ logoHide: true })
-      } else this.setState({ logoHide: false })
-
-      if (window.scrollY >= 260) {
-        this.setState({ menuBgGoDark: true })
-      } else this.setState({ menuBgGoDark: false })
+        this.setState({ logoHide: true, menuBgGoDark: true })
+      } else this.setState({ logoHide: false, menuBgGoDark: false })
     } else {
       this.setState({ logoHide: false, menuBgGoDark: false })
     }
@@ -151,64 +147,66 @@ class App extends React.Component {
       <Router basename={process.env.PUBLIC_URL}>
         <ScrollToTop>
           <>
-            <div className={"nav " + classes}>
-              {this.state.width >= 600 ? null :
-                <div className="menu-icon" onClick={this.handleHamburgerClick} >
-                  <div className={"line " + classes}></div>
-                  <div className={"line " + classes}></div>
-                  <div className={"line " + classes}></div>
+            <div className="container">
+              <div className={"nav " + classes}>
+                {this.state.width >= 600 ? null :
+                  <div className="menu-icon" onClick={this.handleHamburgerClick} >
+                    <div className={"line " + classes}></div>
+                    <div className={"line " + classes}></div>
+                    <div className={"line " + classes}></div>
+                  </div>
+                }
+                <NavLink
+                  className="logo"
+                  onClick={this.handleMenuListClick}
+                  to="/" exact
+                  style={this.state.width >= 600 && this.state.logoHide ? { opacity: "0", height: '100px' } : { opacity: "1", height: '190px' }} >
+                  <img src={Logo} alt="" />
+                </NavLink>
+                <div className={"slide-menu " + menuBg}
+                  style={this.state.logoHide && this.state.width >= 600 ? { marginTop: "0px" } : null} >
+                  <ul className={classes}>
+                    <li><NavLink onClick={() => this.handleMenuListClick()} activeClassName="active" to="/" exact>Home</NavLink></li>
+                    <li><NavLink onClick={() => this.handleMenuListClick()} activeClassName="active" to="/portfolio">Portfolio</NavLink></li>
+                    <li><NavLink onClick={() => this.handleMenuListClick()} activeClassName="active" post={this.state.post} to="/o-nas">O mnie</NavLink></li>
+                    <li><NavLink onClick={() => this.handleMenuListClick()} activeClassName="active" to="/kontakt">Kontakt</NavLink></li>
+                    <li><NavLink onClick={() => this.handleMenuListClick()} activeClassName="active" to="/cennik">Cennik</NavLink></li>
+                  </ul>
                 </div>
-              }
-              <NavLink
-                className="logo"
-                onClick={this.handleMenuListClick}
-                to="/" exact
-                style={this.state.width >= 600 && this.state.logoHide ? { opacity: "0", height: '100px' } : { opacity: "1", height: '190px' }} >
-                <img src={Logo} alt="" />
-              </NavLink>
-              <div className={"slide-menu " + menuBg}
-                style={this.state.logoHide && this.state.width >= 600 ? { marginTop: "0px" } : null} >
-                <ul className={classes}>
-                  <li><NavLink onClick={() => this.handleMenuListClick()} activeClassName="active" to="/" exact>Home</NavLink></li>
-                  <li><NavLink onClick={() => this.handleMenuListClick()} activeClassName="active" to="/portfolio">Portfolio</NavLink></li>
-                  <li><NavLink onClick={() => this.handleMenuListClick()} activeClassName="active" post={this.state.post} to="/o-nas">O mnie</NavLink></li>
-                  <li><NavLink onClick={() => this.handleMenuListClick()} activeClassName="active" to="/kontakt">Kontakt</NavLink></li>
-                  <li><NavLink onClick={() => this.handleMenuListClick()} activeClassName="active" to="/cennik">Cennik</NavLink></li>
-                </ul>
               </div>
-            </div>
-            <div className="content">
-              <Switch>
-                {/* <Suspense fallback={ 
+              <div className="content">
+                <Switch>
+                  {/* <Suspense fallback={ 
                 <div style={{height: '100vh', backgroundColor: "blue", position: 'relative'}}>
                   <div className="loader centered"></div>
                   </div>}> */}
-                <Route path="/" exact ><Home width={this.state.width} data={(opacity) => this.getData(opacity)} bg={bg} /></Route>
-                <Route path="/portfolio" ><Portfolio width={this.state.width} bg={bg} /></Route>
-                <Route path="/o-nas"><Onas width={this.state.width} bg={bg} /></Route>
-                <Route path="/kontakt"><Kontakt width={this.state.width} contactInfo={contactInfo} bg={bg} /></Route>
-                <Route path="/cennik" ><Cennik width={this.state.width} bg={bg} /></Route>
-                <Route path="/polityka-prywatnosci" ><PolitykaPrywatnosci width={this.state.width} contactInfo={contactInfo} /></Route>
+                  <Route path="/" exact ><Home width={this.state.width} data={(opacity) => this.getData(opacity)} bg={bg} /></Route>
+                  <Route path="/portfolio" ><Portfolio width={this.state.width} bg={bg} /></Route>
+                  <Route path="/o-nas"><Onas width={this.state.width} bg={bg} /></Route>
+                  <Route path="/kontakt"><Kontakt width={this.state.width} contactInfo={contactInfo} bg={bg} /></Route>
+                  <Route path="/cennik" ><Cennik width={this.state.width} bg={bg} /></Route>
+                  <Route path="/polityka-prywatnosci" ><PolitykaPrywatnosci width={this.state.width} contactInfo={contactInfo} /></Route>
 
-                {/* </Suspense> */}
-              </Switch>
+                  {/* </Suspense> */}
+                </Switch>
 
-            </div>
-            <footer>
-              <div className="footer">
-                <address>
-                  <p><a href={"tel: " + contactInfo.phone} >{contactInfo.phone}</a> </p>
-                  <p><a href={"mailto: " + contactInfo.email}>{contactInfo.email}</a></p>
-                </address>
-                <div className="fb" onClick={() => { window.open(contactInfo.fbURL, '_blank') }}>
-                  <FontAwesomeIcon icon={faFacebookF} size="3x" />
-                </div>
-                <p> Wszelkie prawa zastrzeżone &copy; 2020</p>
-                <Link onClick={() => this.handleMenuListClick()}
-                  to="/polityka-prywatnosci">Polityka prywatności
-                    </Link>
               </div>
-            </footer>
+              <footer>
+                <div className="footer">
+                  <address>
+                    <p><a href={"tel: " + contactInfo.phone} >{contactInfo.phone}</a> </p>
+                    <p><a href={"mailto: " + contactInfo.email}>{contactInfo.email}</a></p>
+                  </address>
+                  <div className="fb" onClick={() => { window.open(contactInfo.fbURL, '_blank') }}>
+                    <FontAwesomeIcon icon={faFacebookF} size="3x" />
+                  </div>
+                  <p> Wszelkie prawa zastrzeżone &copy; 2020</p>
+                  <Link onClick={() => this.handleMenuListClick()}
+                    to="/polityka-prywatnosci">Polityka prywatności
+                    </Link>
+                </div>
+              </footer>
+            </div>
           </>
         </ScrollToTop>
       </Router>

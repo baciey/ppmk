@@ -144,76 +144,80 @@ class Kontakt extends React.Component {
 
 
     return (
-      <div className="kontakt-container">
-        {width < 400 ? null : <ArrowDown />}
+      <>
         <div className="background-img">
-          {width < 400 ? null : <img src={width < 1024 ? this.props.bg[6] : this.props.bg[5]} alt="" />}
+          {<img src={width < 1024 ? this.props.bg[6] : this.props.bg[5]} alt="" />}
           <div className="text-on-image">
             <p>Skontaktuj się z nami</p>
           </div>
         </div>
-        <form className="contact-form flexItem" onSubmit={this.sendEmail}>
-          {/* <label>Name</label> */}
-          <h3>Formularz kontaktowy</h3>
-          <div className='row'>
-            <input type="text" name="user_name"
-              placeholder="Imię"
-              value={user_name}
-              onChange={(e) => this.handleChange("user_name", e.target.value)} />
-            <div className="isOK " style={user_nameStyle}>
-              {nameIsOkay ? <FontAwesomeIcon icon={faCheck} size="2x" /> :
-                <FontAwesomeIcon icon={faTimes} size="2x" />}
-            </div>
-          </div>
-          {/* <label>Email</label> */}
-          <div className='row'>
-            <input type="text" name="user_email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => this.handleChange("email", e.target.value)} />
-            <div className="isOK" style={emailStyle}>
-              {emailIsOkay ? <FontAwesomeIcon icon={faCheck} size="2x" /> :
-                <FontAwesomeIcon icon={faTimes} size="2x" />}
-            </div>
-          </div>
-          {/* <label>Message</label> */}
-          <div className='row' >
-            <textarea name="message"
-              rows="6"
-              placeholder="Wiadomość"
-              value={msg}
-              onChange={(e) => this.handleChange("msg", e.target.value)} />
-            <div className="isOK" style={msgStyle}>
-              {msgIsOkay ? <FontAwesomeIcon icon={faCheck} size="2x" /> :
-                <FontAwesomeIcon icon={faTimes} size="2x" />}
-            </div>
-          </div>
-          <div className='row' >
-            <input className="button" type="submit" value="Wyślij" />
-            <div className="loader" style={!LoaderON ? { display: 'none' } : { display: 'block' }}></div>
-          </div>
-          <div className='row' >
-            <p className="error" style={msgSuccessful ? { color: 'green' } : { color: '#f23333' }}>{error}</p>
-          </div>
-          <input type="hidden" value={width} name="width" />
-        </form>
-        <div className="contact-info flexItem">
-          <div className="info">
-            <h3>Dane kontaktowe</h3>
-            <p><FontAwesomeIcon className="icon" icon={faMapMarkerAlt} /> {contactInfo.adress}</p>
-            <p><FontAwesomeIcon className="icon" icon={faPhone} /> {contactInfo.phone}</p>
-            <p><FontAwesomeIcon className="icon" icon={faEnvelope} /> {contactInfo.email}</p>
-          </div>
-          <div className="social-media">
-            <div className="fb" onClick={() => { window.open(contactInfo.fbURL, '_blank') }}>
-              <img src={fb} alt="" />
-            </div>
-            <div className="hb" onClick={() => { window.open(contactInfo.hbURL, '_blank') }}>
-              <img src={hb} alt="" />
+        <div className="kontakt-container">
+          {width < 600 ? null : <ArrowDown />}
+          <div className="contact">
+            <form className="contact-form flexItem" onSubmit={this.sendEmail}>
+              {/* <label>Name</label> */}
+              <h3>Formularz kontaktowy</h3>
+              <div className='row'>
+                <input type="text" name="user_name"
+                  placeholder="Imię"
+                  value={user_name}
+                  onChange={(e) => this.handleChange("user_name", e.target.value)} />
+                <div className="isOK " style={user_nameStyle}>
+                  {nameIsOkay ? <FontAwesomeIcon icon={faCheck} size="2x" /> :
+                    <FontAwesomeIcon icon={faTimes} size="2x" />}
+                </div>
+              </div>
+              {/* <label>Email</label> */}
+              <div className='row'>
+                <input type="text" name="user_email"
+                  placeholder="Email"
+                  value={email}
+                  onChange={(e) => this.handleChange("email", e.target.value)} />
+                <div className="isOK" style={emailStyle}>
+                  {emailIsOkay ? <FontAwesomeIcon icon={faCheck} size="2x" /> :
+                    <FontAwesomeIcon icon={faTimes} size="2x" />}
+                </div>
+              </div>
+              {/* <label>Message</label> */}
+              <div className='row' >
+                <textarea name="message"
+                  rows="6"
+                  placeholder="Wiadomość"
+                  value={msg}
+                  onChange={(e) => this.handleChange("msg", e.target.value)} />
+                <div className="isOK" style={msgStyle}>
+                  {msgIsOkay ? <FontAwesomeIcon icon={faCheck} size="2x" /> :
+                    <FontAwesomeIcon icon={faTimes} size="2x" />}
+                </div>
+              </div>
+              <div className='row' >
+                <input className="button" type="submit" value="Wyślij" />
+                <div className="loader" style={!LoaderON ? { display: 'none' } : { display: 'block' }}></div>
+              </div>
+              <div className='row' >
+                <p className="error" style={msgSuccessful ? { color: 'green' } : { color: '#f23333' }}>{error}</p>
+              </div>
+              <input type="hidden" value={width} name="width" />
+            </form>
+            <div className="contact-info flexItem">
+              <div className="info">
+                <h3>Dane kontaktowe</h3>
+                <p><FontAwesomeIcon className="icon" icon={faMapMarkerAlt} /> {contactInfo.adress}</p>
+                <p><FontAwesomeIcon className="icon" icon={faPhone} /> {contactInfo.phone}</p>
+                <p><FontAwesomeIcon className="icon" icon={faEnvelope} /> {contactInfo.email}</p>
+              </div>
+              <div className="social-media">
+                <div className="fb" onClick={() => { window.open(contactInfo.fbURL, '_blank') }}>
+                  <img src={fb} alt="" />
+                </div>
+                <div className="hb" onClick={() => { window.open(contactInfo.hbURL, '_blank') }}>
+                  <img src={hb} alt="" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }

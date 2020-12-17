@@ -13,14 +13,14 @@ const Onas = (props) => {
   })
   return (
     <>
-      <div className="onas-container">
-        <div className="background-img">
-          <img src={width < 1024 ? props.bg[4] : props.bg[3]} alt="" />
-          <div className="text-on-image">
-            <p>Kilka słów o mnie..</p>
-          </div>
+      <div className="background-img">
+        <img src={width < 1024 ? props.bg[4] : props.bg[3]} alt="" />
+        <div className="text-on-image">
+          <p>Kilka słów o mnie..</p>
         </div>
-        {width < 400 ? null : <ArrowDown />}
+      </div>
+      <div className="onas-container">
+        {width < 600 ? null : <ArrowDown />}
         <div className="o-mnie">
           <div className="photo">
             <img src={lady} alt="" />
@@ -32,7 +32,6 @@ const Onas = (props) => {
                 {description}
               </p>
             </div>
-
           </div>
         </div>
       </div>
